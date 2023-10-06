@@ -1,0 +1,449 @@
+
+.dataTable thead tr{
+	background: #EA063D !important;
+	padding-top: 6px !important;
+    padding-bottom: 6px !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	font-size: 0.75rem/* 12px */ !important;
+    line-height: 1rem/* 16px */ !important;
+	text-transform: uppercase !important;
+}
+.dataTable tbody tr, .dataTable tfoot tr{
+	background-color: #B60E37 !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+}
+/* table.dataTable.display tbody tr.odd>.sorting_1 {
+	background-color: #B60E37 !important;
+} */
+.dataTables_info,
+.dataTables_length label,
+.dataTables_filter label{
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	text-transform: uppercase;
+}
+
+.dataTables_paginate .paginate_button{
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	text-transform: uppercase;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    font-weight: 700;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+	color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    font-weight: 700;
+    border-radius: 0.25rem;
+    background: #667eea !important;
+    border: 1px solid transparent;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    font-weight: 700;
+    border-radius: 0.25rem;
+    background: #667eea !important;
+    border: 1px solid transparent;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #e2e8f0;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background-color: #667eea !important;
+}
+
+
+/*Pagination Buttons*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    border: 1px solid transparent; /*border border-transparent*/
+}
+
+/*Pagination Buttons - Current selected */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important; /*text-white*/
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /*shadow*/
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    background: #667eea !important; /*bg-indigo-500*/
+    border: 1px solid transparent; /*border border-transparent*/
+}
+
+/*Pagination Buttons - Hover */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important; /*text-white*/
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /*shadow*/
+    font-weight: 700; /*font-bold*/
+    border-radius: 0.25rem; /*rounded*/
+    background: #667eea !important; /*bg-indigo-500*/
+    border: 1px solid transparent; /*border border-transparent*/
+}
+
+/*Add padding to bottom border */
+table.dataTable.no-footer {
+    border-bottom: 1px solid #e2e8f0; /*border-b-1 border-gray-300*/
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+/*Change colour of responsive icon*/
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background-color: #667eea !important; /*bg-indigo-500*/
+}
+
+#main-table_info,#item-table_info{
+	display: flex;
+	align-items: center;
+	grid-column: span 3 / span 3;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+	text-transform: uppercase;
+}
+
+#main-table_paginate #main-table_previous,
+#item-table_paginate #item-table_previous{
+	padding-left: 0.75rem/* 12px */;
+    padding-right: 0.75rem/* 12px */;
+	padding-top: 0.25rem/* 4px */;
+    padding-bottom: 0.25rem/* 4px */;
+	border-radius: 0.375rem/* 6px */;
+	border-top-left-radius: 0.5rem/* 8px */;
+    border-bottom-left-radius: 0.5rem/* 8px */;
+	outline: 2px solid transparent;
+    outline-offset: 2px;
+	border-style: none !important;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	text-transform: uppercase;
+}
+#main-table_paginate #main-table_previous:hover,
+#item-table_paginate #item-table_previous:hover{
+	outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+	border-style: none !important;
+	--tw-bg-opacity: 1 !important;
+    background-color: rgb(255 32 32 / var(--tw-bg-opacity)) !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+#main-table_paginate #main-table_next,
+#item-table_paginate #item-table_next{
+	padding-left: 0.75rem/* 12px */;
+    padding-right: 0.75rem/* 12px */;
+	padding-top: 0.25rem/* 4px */;
+    padding-bottom: 0.25rem/* 4px */;
+	border-radius: 0.375rem/* 6px */;
+	border-top-left-radius: 0.5rem/* 8px */;
+    border-bottom-left-radius: 0.5rem/* 8px */;
+	outline: none;
+	border: none;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	text-transform: uppercase;
+}
+#main-table_paginate #main-table_next:hover,
+#item-table_paginate #item-table_next:hover{
+	outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+	border-style: none !important;
+	--tw-bg-opacity: 1 !important;
+    background-color: rgb(255 32 32 / var(--tw-bg-opacity)) !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+#main-table_paginate .paginate_button,
+#item-table_paginate .paginate_button {
+	padding-left: 0.75rem/* 12px */;
+    padding-right: 0.75rem/* 12px */;
+	padding-top: 0.25rem/* 4px */;
+    padding-bottom: 0.25rem/* 4px */;
+	border-radius: 0.375rem/* 6px */;
+	border-top-left-radius: 0.5rem/* 8px */;
+    border-bottom-left-radius: 0.5rem/* 8px */;
+	outline: none;
+	border: none;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	text-transform: uppercase;
+}
+
+#main-table_paginate .paginate_button:hover,
+#item-table_paginate .paginate_button:hover{
+	outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+	border-style: none !important;
+	--tw-bg-opacity: 1 !important;
+    background-color: rgb(255 32 32 / var(--tw-bg-opacity)) !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+#main-table_paginate .paginate_button.current,
+#item-table_paginate .paginate_button.current {
+	padding-left: 0.75rem/* 12px */;
+    padding-right: 0.75rem/* 12px */;
+	padding-top: 0.25rem/* 4px */;
+    padding-bottom: 0.25rem/* 4px */;
+	border-radius: 0.375rem/* 6px */;
+	border-top-left-radius: 0.5rem/* 8px */;
+    border-bottom-left-radius: 0.5rem/* 8px */;
+	outline: none;
+	border: none;
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	text-transform: uppercase;
+	--tw-bg-opacity: 1 !important;
+    background-color: rgb(255 32 32 / var(--tw-bg-opacity)) !important;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+#main-table_paginate .paginate_button.current:hover,
+#item-table_paginate .paginate_button.current:hover{
+	outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+	border-style: none !important;
+}
+
+#main-table_length, #main-table_filter,
+#item-table_length, #item-table_filter{
+	font-size: 0.75rem/* 12px */;
+    line-height: 1rem/* 16px */;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	text-transform: uppercase;
+	margin-bottom: 0.75rem/* 12px */;
+}
+#main-table_filter label input,
+#item-table_filter label input{
+	border-width: 1px !important;
+	padding-left: 0.875rem/* 14px */ !important;
+    padding-right: 0.875rem/* 14px */ !important;
+	padding-top: 0.25rem/* 4px */ !important;
+    padding-bottom: 0.25rem/* 4px */ !important;
+	border-radius: 0.75rem/* 12px */;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+	--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#main-table_filter label input:focus,
+#item-table_filter label input:focus{
+	outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+	--tw-border-opacity: 1 !important;
+    border-color: rgb(14 165 233 / var(--tw-border-opacity)) !important;
+}
+
+
+.action-dropdown-item{
+	display: block;
+	padding: 0.5rem/* 8px */;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+	--tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+	border-radius: 0.375rem/* 6px */;
+}
+
+.action-dropdown-item:hover{
+	--tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.dataTables_processing{
+	padding-top: 10px !important;
+	background: #EA063D !important;
+	color: white !important;
+	border-radius: 0.25rem;
+	height: 38px !important;
+	margin-top: -10px !important;
+	width: 100.4% !important;
+	font-size: 0.75rem/* 12px */ !important;
+    line-height: 1rem/* 16px */ !important;
+}
+
+table.dataTable td.select-checkbox:before,
+table.dataTable td.select-checkbox:after,
+table.dataTable th.select-checkbox:before,
+table.dataTable th.select-checkbox:after {
+	display: block;
+	background: white;
+    position: absolute;
+    top: 1.2em;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    box-sizing: border-box;
+}
+
+.dt-buttons{
+	margin-top: -56px;
+    display: flex;
+    justify-content: end;
+    width: 20rem;
+	position: absolute !important;
+	right: 0;
+}
+
+button.dt-button{
+	transition-property: all !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+	transition-duration: 150ms !important;
+	/* border-width: 1px !important; */
+	border: 1px solid white;
+	align-items: center !important;
+	display: flex !important;
+	font-size: 0.75rem !important;
+	line-height: 1rem !important;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	background-color: transparent !important;
+	padding-top: 0.25rem !important;
+	padding-bottom: 0.25rem !important;
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+	border-radius: 9999px !important;
+}
+
+
+.btn-export-pdf, .btn-export-csv, .btn-export-xls{
+	display: none;
+}
+
+button.dt-button:hover{
+	--tw-bg-opacity: 1;
+	background-color: rgb(153 27 27 / var(--tw-bg-opacity)) !important;
+}
+
+button.dt-buttonaa{
+	transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 150ms !important;
+	transition-duration: 200ms !important;
+	border-radius: 9999px !important;
+	padding-left: 0.75rem/* 12px */ !important;
+    padding-right: 0.75rem/* 12px */ !important;
+	padding-top: 0.25rem/* 4px */ !important;
+    padding-bottom: 0.25rem/* 4px */ !important;
+	background-color: transparent !important;
+	--tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+	font-size: 0.75rem/* 12px */ !important;
+    line-height: 1rem/* 16px */ !important;
+	display: flex !important;
+	align-items: center !important;
+	border-width: 1px !important;
+	position: static !important;
+	margin-left: 0.5rem !important;
+	margin-right: 0 !important;
+	/* margin-bottom: 2rem !important; */
+}
+
+.dt-button:hover{
+	--tw-bg-opacity: 1;
+    background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+/* table.dataTable td.select-checkbox:before,
+table.dataTable th.select-checkbox:before {
+    background: white;
+    content: ' ';
+    margin-top: -6px;
+    margin-left: -6px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+table.dataTable td.select-checkbox:after,
+table.dataTable th.select-checkbox:after {
+    background: white;
+    content: "✔";
+    margin-top: -6px;
+    margin-left: -6px;
+    border: 1px solid black;
+    border-radius: 3px;
+} */
+
+/* table.dataTable tr th.select-checkbox.selected::after {
+    content: "✔";
+    margin-top: -11px;
+    margin-left: -4px;
+    text-align: center;
+    text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
+} */
+
+
+/* table.dataTable tr th.select-checkbox.selected::after { */
+/* table.dataTable td.select-checkbox, table.dataTable th.select-checkbox { */
+
+/* table.dataTable td.select-checkbox:before, table.dataTable th.select-checkbox:before {
+} */
+
+/* table.dataTable td.select-checkbox:before, table.dataTable th.select-checkbox:before {
+    content: "✔";
+    margin-top: -11px;
+    margin-left: -4px;
+    text-align: center;
+    text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
+
+	--tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+	border-radius: 0.25rem;
+	height: 1rem;
+	width: 1rem;
+
+	@apply border-gray-300 rounded h-4 w-4
+}  */
