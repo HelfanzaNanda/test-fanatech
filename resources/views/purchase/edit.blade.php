@@ -112,10 +112,10 @@
                 tr += `         <input value="${item ? item.inventory.stock : ''}" data-id="${id}" class="form-control input-stock" disabled type="text" name="stock[]" id="input-stock-${id}"> `;
                 tr += `    </td>`;
                 tr += `    <td>`;
-                tr += `         <input disabled ${!item ? "disabled" : ""} value="${item ? item.qty : ''}" data-id="${id}" onkeypress="numberOnly(event)" class="form-control input-qty" type="text" name="qty[]" id="input-qty-${id}"> `;
+                tr += `         <input value="${item ? item.qty : ''}" data-id="${id}" onkeypress="numberOnly(event)" class="form-control input-qty" type="text" name="qty[]" id="input-qty-${id}"> `;
                 tr += `    </td>`;
                 tr += `    <td>`;
-                tr += `         <input ${!item ? "disabled" : ""} value="${item ? item.price : ''}" data-id="${id}" onkeypress="numberOnly(event)" class="form-control input-price" type="text" name="price[]" id="input-price-${id}"> `;
+                tr += `         <input disabled data-price="${item ? item.price : ''}" value="${item ? rupiahFormat(item.price) : ''}" data-id="${id}" onkeypress="numberOnly(event)" class="form-control input-price" type="text" name="price[]" id="input-price-${id}"> `;
                 tr += `    </td>`;
                 tr += `    <td>`;
                 tr += `         <input data-id="${id}" class="form-control input-total" disabled type="text" name="total[]" id="input-total-${id}"> `;
@@ -142,20 +142,28 @@
             const id = $(this).data('id');
             const data = $(this).select2('data')[0];
             let stock = data.stock;
+            let price = data.price;
+
             if (!stock) {
                 stock = $(this).find(":selected").data("stock")
             }else{
                 $(`#input-qty-${id}`).attr("disabled", false)
             }
+            if (!price) {
+                price = $(`#input-price-${id}`).data("price")
+            }else{
+                $(`#input-price-${id}`).attr("data-price", price)
+                $(`#input-price-${id}`).val(rupiahFormat(price))
+            }
             console.log("DATA : ", data);
             $(`#input-stock-${id}`).val(stock)
-            $(`#input-price-${id}`).attr("disabled", false)
+            // $(`#input-price-${id}`).attr("disabled", false)
         });
 
-        $(document).on("input", ".input-price", function (e) {
-            const id = $(this).data('id');
-            calculateTotal(id);
-        });
+        // $(document).on("input", ".input-price", function (e) {
+        //     const id = $(this).data('id');
+        //     calculateTotal(id);
+        // });
         $(document).on("input", ".input-qty", function (e) {
             const id = $(this).data('id');
             const oldQty = $(this).data('qty');
@@ -169,7 +177,7 @@
 
 
             const qty = $(this).val();
-            const remaining_stock = parseInt(stock) + parseInt(qty);
+            let remaining_stock = parseInt(stock) + parseInt(qty);
             if (remaining_stock < 1) {
                 e.preventDefault();
                 $(this).val(oldQty);
@@ -182,7 +190,7 @@
                 remaining_stock = oldQty;
             }
 
-            $(`#input-stock-${id}`).val(remaining_stock);
+            // $(`#input-stock-${id}`).val(remaining_stock);
 
             $(this).data('qty', qty);
             calculateTotal(id);
@@ -192,7 +200,9 @@
 
 
             let qty = $(`#input-qty-${key}`).val();
-            let price = $(`#input-price-${key}`).val();
+            // let price = $(`#input-price-${key}`).val();
+            let price = $(`#input-price-${key}`).data("price")
+
 
 
             qty = parseInt(qty)

@@ -82,15 +82,15 @@ class SalesController extends Controller
 
                 $inventory = Inventory::query()->where("id", $item['inventory_id'])->first();
                 if ($inventory) {
-                    $inventory->update([
-                        'stock' => $inventory->stock - $item['qty']
-                    ]);
+                    // $inventory->update([
+                    //     'stock' => $inventory->stock - $item['qty']
+                    // ]);
 
                     SalesDetail::create([
                         "sales_id" => $sales->id,
                         "inventory_id" => $item['inventory_id'],
                         "qty" => $item['qty'],
-                        "price" => $item['price'],
+                        "price" => $inventory->price,
                     ]);
                 }
 
@@ -140,17 +140,17 @@ class SalesController extends Controller
 
                 $inventory = Inventory::query()->where("id", $item['inventory_id'])->first();
                 if ($inventory) {
-                    if (!in_array($inventory->id, $itemIds ?? [])) {
-                        $inventory->update([
-                            'stock' => $inventory->stock - $item['qty']
-                        ]);
-                    }
+                    // if (!in_array($inventory->id, $itemIds ?? [])) {
+                    //     $inventory->update([
+                    //         'stock' => $inventory->stock - $item['qty']
+                    //     ]);
+                    // }
 
                     SalesDetail::create([
                         "sales_id" => $sales->id,
                         "inventory_id" => $item['inventory_id'],
                         "qty" => $item['qty'],
-                        "price" => $item['price'],
+                        "price" => $inventory->price,
                     ]);
                 }
 

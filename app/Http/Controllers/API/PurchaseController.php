@@ -79,14 +79,15 @@ class PurchaseController extends Controller
             foreach ($items as $item) {
                 $inventory = Inventory::query()->where("id", $item['inventory_id'])->first();
                 if ($inventory) {
-                    $inventory->update([
-                        'stock' => $inventory->stock + $item['qty']
-                    ]);
+                    // $inventory->update([
+                    //     'stock' => $inventory->stock + $item['qty']
+                    // ]);
                     PurchaseDetail::create([
                         "purchase_id" => $purchase->id,
                         "inventory_id" => $item['inventory_id'],
                         "qty" => $item['qty'],
-                        "price" => $item['price'],
+                        "price" => $inventory->price,
+
                     ]);
                 }
             }
@@ -135,17 +136,18 @@ class PurchaseController extends Controller
 
                 $inventory = Inventory::query()->where("id", $item['inventory_id'])->first();
                 if ($inventory) {
-                    if (!in_array($inventory->id, $itemIds ?? [])) {
-                        $inventory->update([
-                            'stock' => $inventory->stock + $item['qty']
-                        ]);
-                    }
+                    // if (!in_array($inventory->id, $itemIds ?? [])) {
+                    //     $inventory->update([
+                    //         'stock' => $inventory->stock + $item['qty']
+                    //     ]);
+                    // }
 
                     PurchaseDetail::create([
                         "purchase_id" => $purchase->id,
                         "inventory_id" => $item['inventory_id'],
                         "qty" => $item['qty'],
-                        "price" => $item['price'],
+                        "price" => $inventory->price,
+                        
                     ]);
                 }
 

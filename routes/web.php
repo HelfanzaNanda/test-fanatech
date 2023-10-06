@@ -1,11 +1,23 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/', function () {
 //     return view('login.index');
 // });
+
+// Route::get('/clear', function() {
+//     Artisan::call('config:cache');
+//      Artisan::call('cache:clear');
+//      Artisan::call('config:clear');
+//      Artisan::call('view:clear');
+//      Artisan::call('route:clear');
+//      exec('rm -f ' . storage_path('logs/.log'));
+//      exec('rm -f ' . base_path('.log'));
+//      return "Cache is cleared";
+// })->name('clear.cache');
 
 Route::get('login',  'LoginController@index')->middleware('guest')->name('login');
 

@@ -129,14 +129,16 @@
             const data = $(this).select2('data')[0];
             console.log("DATA : ", data);
             $(`#input-stock-${id}`).val(data.stock)
+            $(`#input-price-${id}`).val(rupiahFormat(data.price))
+            $(`#input-price-${id}`).attr("data-price", data.price)
             $(`#input-qty-${id}`).attr("disabled", false)
-            $(`#input-price-${id}`).attr("disabled", false)
+            // $(`#input-price-${id}`).attr("disabled", false)
         });
 
-        $(document).on("input", ".input-price", function (e) {
-            const id = $(this).data('id');
-            calculateTotal(id);
-        });
+        // $(document).on("input", ".input-price", function (e) {
+        //     const id = $(this).data('id');
+        //     calculateTotal(id);
+        // });
         $(document).on("input", ".input-qty", function (e) {
             const id = $(this).data('id');
             const oldQty = $(this).data('qty');
@@ -155,7 +157,7 @@
                 return false;
             }
 
-            $(`#input-stock-${id}`).val(remaining_stock);
+            // $(`#input-stock-${id}`).val(remaining_stock);
 
             $(this).data('qty', qty);
             calculateTotal(id);
@@ -165,7 +167,8 @@
 
 
             let qty = $(`#input-qty-${key}`).val();
-            let price = $(`#input-price-${key}`).val();
+            // let price = $(`#input-price-${key}`).val();
+            let price = $(`#input-price-${key}`).data("price");
 
 
             qty = parseInt(qty)

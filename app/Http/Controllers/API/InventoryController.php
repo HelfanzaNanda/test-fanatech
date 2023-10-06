@@ -15,7 +15,7 @@ class InventoryController extends Controller
     public function options(Request $request)
     {
         $term = trim($request->term);
-        $options = Inventory::select("id", "name as text", "stock")
+        $options = Inventory::select("id", "name as text", "stock", "price")
             ->where('name', 'LIKE',  '%' . $term. '%')
             ->orderBy('name', 'asc')->simplePaginate(10);
         $morePages = true;
@@ -43,7 +43,7 @@ class InventoryController extends Controller
 
         try {
             $data = DatatableHelper::make($cmd, $columns, $start, $length, $order, $search);
-            return response()->json($data, 200);
+            return response()->json($data);
 
         } catch (\Throwable $th) {
             return response()->json(ResponseHelper::error(th: $th), 500);

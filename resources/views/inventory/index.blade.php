@@ -53,7 +53,7 @@
                     }
                 },
                 "columns": [
-                    { title : 'No', data: 'number', name: 'number', width: '5%', searchable:false, orderable: false, render : (data, type, row, meta) => meta.row + meta.settings._iDisplayStart + 1 },
+                    { title : 'No', data: null, name: 'number', width: '5%', searchable:false, orderable: false, render : (data, type, row, meta) => meta.row + meta.settings._iDisplayStart + 1 },
                     { title : 'Code', data: 'code', name: 'code', render : (data) => data || '' },
                     { title : 'Name', data: 'name', name: 'name', render : (data) => data || '' },
                     { title : 'Price', data: 'price', name: 'price', render : (data) => data ? rupiahFormat(data) : '' },
